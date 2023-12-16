@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Outfit:wght@300;400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Outfit;
+}
+body {
+  background-color: hsl(217, 54%, 11%);
+}
+main {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+}
+
+.card {
+  place-self: center;
+  width: 330px;
+  border-radius: 15px;
+  padding: 20px 17px 20px;
+  background-color: hsl(216, 50%, 16%);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.nft__image {
+  max-width: 100%;
+  position: relative;
+  display: grid;
+
+  cursor: pointer;
+}
+
+.nft__image img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  display: grid;
+}
+
+.nft__image:hover::before {
+  transition: all 3s;
+  display: grid;
+  content: "";
+  position: absolute;
+  top: 41%;
+  left: 42%;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/icon-view.svg");
+  background-repeat: no-repeat;
+  z-index: 4;
+}
+
+.nft__image:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsl(178, 100%, 50%);
+  opacity: 0.3;
+  border-radius: 0.5rem;
+  z-index: 3;
+}
+
+.nft__info {
+  padding: 13px 5px;
+}
+.nft__info h1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 21px;
+  font-weight: 400;
+  padding-bottom: 0.9rem;
+  transition: color 0.2s;
+}
+.nft__info h1:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.nft__info p {
+  color: hsl(215, 51%, 70%);
+  font-size: 18px;
+  font-weight: 300;
+}
+.nft__info .coin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 0 0 0;
+  width: 100%;
+}
+.price,
+.time {
+  display: flex;
+}
+
+.price img {
+  font-size: 10px !important;
+}
+.price h4 {
+  color: hsl(178, 100%, 50%);
+  font-weight: 400;
+  margin-left: 0.4rem;
+  font-style: 12px;
+}
+
+.time p {
+  font-size: 18px;
+  font-weight: 300;
+}
+.creation {
+  display: flex;
+  align-items: center;
+  padding: 10px 5px;
+  width: 100%;
+  font-size: 18px;
+  border-top: 1px solid hsl(215, 32%, 27%);
+  font-weight: 300;
+}
+
+.creation img {
+  max-width: 30px;
+  margin-right: 15px;
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 100%);
+}
+.creation p {
+  color: hsl(215, 51%, 70%);
+  font-size: 18px;
+  font-weight: 300;
+}
+.creation p span {
+  color: hsl(0, 0%, 100%);
+  font-weight: 300;
+  transition: color 0.6s;
+}
+.creation p span:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
